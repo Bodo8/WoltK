@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoltK.Tests.Unit", "WoltK.Tests.Unit\WoltK.Tests.Unit.csproj", "{1F1813D4-BCF0-4D58-9A5A-92D41FE432CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoltK", "WoltK\WoltK.csproj", "{960A9385-CBC4-40F9-94EC-442BE15DF563}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F1813D4-BCF0-4D58-9A5A-92D41FE432CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F1813D4-BCF0-4D58-9A5A-92D41FE432CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F1813D4-BCF0-4D58-9A5A-92D41FE432CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F1813D4-BCF0-4D58-9A5A-92D41FE432CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{960A9385-CBC4-40F9-94EC-442BE15DF563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{960A9385-CBC4-40F9-94EC-442BE15DF563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{960A9385-CBC4-40F9-94EC-442BE15DF563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{960A9385-CBC4-40F9-94EC-442BE15DF563}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C556245A-008C-420C-8993-E3DCF77B3F19}
+	EndGlobalSection
+EndGlobal
