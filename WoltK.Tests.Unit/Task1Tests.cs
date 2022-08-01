@@ -7,15 +7,15 @@ namespace WoltK.Tests.Unit
 {
     public class Task1Tests
     {
-        IEmployeeFactory _employeeFactoryStub;
-        IEmployeeRepository _employeeRepisitory;
+        IEmployeeFactory _employeeFactoryMock;
+        IEmployeeRepository _employeeRepisitoryMock;
         Task1 _sut;
 
         public Task1Tests()
         {
-            _employeeFactoryStub = Substitute.For<IEmployeeFactory>();
-            _employeeRepisitory = Substitute.For<IEmployeeRepository>();
-            _sut = new Task1(_employeeFactoryStub, _employeeRepisitory);
+            _employeeFactoryMock = Substitute.For<IEmployeeFactory>();
+            _employeeRepisitoryMock = Substitute.For<IEmployeeRepository>();
+            _sut = new Task1(_employeeFactoryMock, _employeeRepisitoryMock);
         }
 
         [Fact]
@@ -24,7 +24,7 @@ namespace WoltK.Tests.Unit
             //arrange
             string lastName = "testName";
             Employee employee = new Employee();
-            _employeeFactoryStub.Create(lastName).Returns(employee);
+            _employeeFactoryMock.Create(lastName).Returns(employee);
 
             //act
             Guid actual = _sut.CreateEmployee(lastName);
@@ -39,12 +39,11 @@ namespace WoltK.Tests.Unit
         public void CreateEmployee_Should_Throw_ArgumentException(string name)
         {
             //arrange
-            string lastName = name;
             Employee employee = new Employee();
-            _employeeFactoryStub.Create(lastName).Returns(employee);
+            _employeeFactoryMock.Create(name).Returns(employee);
 
             //act
-            Action actual = () => _sut.CreateEmployee(lastName);
+            Action actual = () => _sut.CreateEmployee(name);
 
             //assert
             actual.Should().ThrowExactly<ArgumentException>()
