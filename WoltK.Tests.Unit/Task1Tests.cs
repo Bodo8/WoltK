@@ -47,7 +47,8 @@ namespace WoltK.Tests.Unit
 
             //assert
             actual.Should().ThrowExactly<ArgumentException>()
-                .WithMessage("Value cannot be null or empty (Parameter 'lastName')");
+                .WithMessage("Value cannot be null or empty (Parameter 'lastName')")
+                .And.ParamName.Should().Be("lastName");
         }
     }
 }
